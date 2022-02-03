@@ -1,13 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, SafeAreaView } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+    <SafeAreaView style={styles.container}>
+      <View style={styles.buttomButtons}>
+        <Button title='Home'>
+
+        </Button>
+
+        <Button title='Contact Us'>
+
+        </Button>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -15,7 +27,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: 'flex',
   },
+  buttomButtons: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  }
 });
+
