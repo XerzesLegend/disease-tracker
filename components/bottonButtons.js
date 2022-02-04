@@ -11,4 +11,4 @@ function MyTabs() {
   );
 }
 
-export default function MyTabs();
+export default MyTabs();
