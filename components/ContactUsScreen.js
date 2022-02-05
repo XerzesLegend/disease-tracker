@@ -1,12 +1,27 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Button} from 'react-native';
 
 function SettingsScreen() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.buttons}><Button  title='Report a bug'/></View>
+        <View style={styles.buttons}><Button title='Suggestions'/></View>
+        <View style={styles.buttons}><Button title='Donate to Us'/></View>
+
+      </SafeAreaView>
     );
   }
 
-  export default SettingsScreen
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttons: {
+    padding: 30,
+  }
+});
+
+export default SettingsScreen

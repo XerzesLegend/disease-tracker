@@ -1,11 +1,16 @@
 import * as React from 'react';
-import { StyleSheet,Text, View } from 'react-native';
+import { StyleSheet,Text, View, SafeAreaView } from 'react-native';
 
 function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Home this!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text style={styles.title}>Disease Tracker</Text>
+      </View>
+      <View style={styles.cases}>
+        <Text>1000 Cases</Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -17,6 +22,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: 30,
+    padding: 30,
+  },
+  cases: {
+    flex: 1,
+  }
 });
 
 export default HomeScreen
