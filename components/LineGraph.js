@@ -1,11 +1,4 @@
-import {
-    LineChart,
-    BarChart,
-    PieChart,
-    ProgressChart,
-    ContributionGraph,
-    StackedBarChart
-  } from 'react-native-chart-kit'
+import {LineChart} from 'react-native-chart-kit'
 import {Text, View, Dimensions} from 'react-native';
 
 const line = {

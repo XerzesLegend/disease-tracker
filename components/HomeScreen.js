@@ -1,16 +1,7 @@
 import * as React from 'react';
 import { StyleSheet,Text, View, SafeAreaView } from 'react-native';
 import LineGraph from './LineGraph';
-
-const line = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-  datasets: [
-    {
-      data: [20, 45, 28, 80, 99, 43],
-      strokeWidth: 2, // optional
-    },
-  ],
-};
+import PickerSlider from './PickerSlider';
 
 function HomeScreen() {
   return (
@@ -18,6 +9,7 @@ function HomeScreen() {
       <View>
         <Text style={styles.title}>Disease Tracker</Text>
       </View>
+      <PickerSlider/>
       <View style={styles.cases}>
         <Text>1000 Cases</Text>
         <LineGraph/>
